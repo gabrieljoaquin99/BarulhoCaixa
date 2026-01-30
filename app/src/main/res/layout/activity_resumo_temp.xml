@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResumoTempActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spnResumoTempAno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnResumoTempAnoAtt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnResumoTempAnoAtt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/primary"
+                android:onClick="btnResumoTempAnoAtt"
+                android:text="ATUALIZAR"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/spnResumoTempAno"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spnResumoTempAno" />
+
+            <TextView
+                android:id="@+id/lblResumoTempGols"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Gols: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnResumoTempAnoAtt" />
+
+            <ListView
+                android:id="@+id/listResumoTempGols"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/colorControlHighlight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblResumoTempGols" />
+
+            <TextView
+                android:id="@+id/lblResumoTempAssis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Assistencia: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/listResumoTempGols" />
+
+            <ListView
+                android:id="@+id/listResumoTempAssis"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/colorControlHighlight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblResumoTempAssis" />
+
+            <TextView
+                android:id="@+id/lblResumoTempJogos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Jogos"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/listResumoTempAssis" />
+
+            <TextView
+                android:id="@+id/txtResumoTempJogos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/lblResumoTempJogos"
+                app:layout_constraintStart_toStartOf="@+id/lblResumoTempJogos"
+                app:layout_constraintTop_toBottomOf="@+id/lblResumoTempJogos" />
+
+            <TextView
+                android:id="@+id/lblResumoTempVit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="Vitorias"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/lblResumoTempJogos"
+                app:layout_constraintTop_toBottomOf="@+id/listResumoTempAssis" />
+
+            <TextView
+                android:id="@+id/txtResumoTempVit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/lblResumoTempVit"
+                app:layout_constraintStart_toStartOf="@+id/lblResumoTempVit"
+                app:layout_constraintTop_toBottomOf="@+id/lblResumoTempVit" />
+
+            <TextView
+                android:id="@+id/lblResumoTempEmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Empates"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/lblResumoTempDer"
+                app:layout_constraintStart_toEndOf="@+id/lblResumoTempVit"
+                app:layout_constraintTop_toBottomOf="@+id/listResumoTempAssis" />
+
+            <TextView
+                android:id="@+id/txtResumoTempEmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/lblResumoTempEmp"
+                app:layout_constraintStart_toStartOf="@+id/lblResumoTempEmp"
+                app:layout_constraintTop_toBottomOf="@+id/lblResumoTempEmp" />
+
+            <TextView
+                android:id="@+id/lblResumoTempDer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="Derrotas"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/listResumoTempAssis" />
+
+            <TextView
+                android:id="@+id/txtResumoTempDer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/lblResumoTempDer"
+                app:layout_constraintStart_toStartOf="@+id/lblResumoTempDer"
+                app:layout_constraintTop_toBottomOf="@+id/lblResumoTempDer" />
+
+            <TextView
+                android:id="@+id/lblResumoTempGolsF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Gols Feitos"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtResumoTempJogos" />
+
+            <TextView
+                android:id="@+id/txtResumoTempGolsF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/lblResumoTempGolsF"
+                app:layout_constraintStart_toStartOf="@+id/lblResumoTempGolsF"
+                app:layout_constraintTop_toBottomOf="@+id/lblResumoTempGolsF" />
+
+            <TextView
+                android:id="@+id/lblResumoTempGolsS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Gols Sofridos"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/lblResumoTempSaldoGols"
+                app:layout_constraintStart_toEndOf="@+id/lblResumoTempGolsF"
+                app:layout_constraintTop_toBottomOf="@+id/txtResumoTempJogos" />
+
+            <TextView
+                android:id="@+id/txtResumoTempGolsS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/lblResumoTempGolsS"
+                app:layout_constraintStart_toStartOf="@+id/lblResumoTempGolsS"
+                app:layout_constraintTop_toBottomOf="@+id/lblResumoTempGolsS" />
+
+            <TextView
+                android:id="@+id/lblResumoTempSaldoGols"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="Saldo Gols"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtResumoTempJogos" />
+
+            <TextView
+                android:id="@+id/txtResumoTempSaldoGols"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/lblResumoTempSaldoGols"
+                app:layout_constraintStart_toStartOf="@+id/lblResumoTempSaldoGols"
+                app:layout_constraintTop_toBottomOf="@+id/lblResumoTempSaldoGols" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

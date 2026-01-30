@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/fundo"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/secundary"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtLancDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="txtLancDesc"
+        android:textColor="?attr/colorPrimaryContainer"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtLancDtPag"
+        app:layout_constraintEnd_toStartOf="@+id/txtLancVlr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fundo" />
+
+    <TextView
+        android:id="@+id/txtLancVlr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="txtLancVlr"
+        android:textColor="?attr/colorPrimaryContainer"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/fundo"
+        app:layout_constraintTop_toTopOf="@+id/fundo" />
+
+    <TextView
+        android:id="@+id/txtLancDtPag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="txtLancDtPag"
+        android:textColor="?attr/colorPrimaryContainer"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtLancTipo"
+        app:layout_constraintStart_toStartOf="@+id/fundo"
+        app:layout_constraintTop_toBottomOf="@+id/txtLancVlr" />
+
+    <TextView
+        android:id="@+id/txtLancTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="txtLancTipo"
+        android:textColor="?attr/colorPrimaryContainer"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/fundo"
+        app:layout_constraintTop_toBottomOf="@+id/txtLancVlr" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

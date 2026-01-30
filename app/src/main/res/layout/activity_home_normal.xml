@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeNormal">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layHomeNormalJogaLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/constraint_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgHomeNormalJoga"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/escbarulho" />
+
+                <TextView
+                    android:id="@+id/txtHomeNormalJogaNome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Nome"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgHomeNormalJoga"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtHomeNormalJogaStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Status"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgHomeNormalJoga"
+                    app:layout_constraintTop_toBottomOf="@+id/txtHomeNormalJogaNome" />
+
+                <TextView
+                    android:id="@+id/lblHomeNormalJogaJogos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Jogos"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@id/imgHomeNormalJoga"
+                    app:layout_constraintTop_toBottomOf="@+id/txtHomeNormalJogaStatus" />
+
+                <TextView
+                    android:id="@+id/txtHomeNormalJogaJogos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/lblHomeNormalJogaJogos"
+                    app:layout_constraintStart_toStartOf="@+id/lblHomeNormalJogaJogos"
+                    app:layout_constraintTop_toBottomOf="@+id/lblHomeNormalJogaJogos" />
+
+                <TextView
+                    android:id="@+id/lblHomeNormalJogaGols"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Gols"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/lblHomeNormalJogaAssist"
+                    app:layout_constraintStart_toEndOf="@+id/lblHomeNormalJogaJogos"
+                    app:layout_constraintTop_toBottomOf="@+id/txtHomeNormalJogaStatus" />
+
+                <TextView
+                    android:id="@+id/txtHomeNormalJogaGols"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/lblHomeNormalJogaGols"
+                    app:layout_constraintStart_toStartOf="@+id/lblHomeNormalJogaGols"
+                    app:layout_constraintTop_toBottomOf="@+id/lblHomeNormalJogaJogos" />
+
+                <TextView
+                    android:id="@+id/lblHomeNormalJogaAssist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Assist."
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtHomeNormalJogaStatus" />
+
+                <TextView
+                    android:id="@+id/txtHomeNormalJogaAssist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/lblHomeNormalJogaAssist"
+                    app:layout_constraintStart_toStartOf="@+id/lblHomeNormalJogaAssist"
+                    app:layout_constraintTop_toBottomOf="@+id/lblHomeNormalJogaJogos" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnHomeNormalCadMensal"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/primary"
+                android:onClick="btnHomeNormalCadMensal"
+                android:paddingStart="50dp"
+                android:text="MENSALIDADES"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_mensal"
+                app:iconPadding="-50dp"
+                app:iconSize="40dp"
+                app:iconTintMode="multiply"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layHomeNormalJogaLogin" />
+
+            <Button
+                android:id="@+id/btnHomeNormalResumoFin"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/primary"
+                android:onClick="btnHomeNormalResumoFin"
+                android:paddingStart="50dp"
+                android:text="RES. FINANCEIRO"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_resumo_fin"
+                app:iconPadding="-50dp"
+                app:iconSize="40dp"
+                app:iconTintMode="multiply"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnHomeNormalCadMensal" />
+
+            <Button
+                android:id="@+id/btnHomeNormalResumoTemp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/primary"
+                android:onClick="btnHomeNormalResumoTemp"
+                android:paddingStart="50dp"
+                android:text="RES. TEMPORADA"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_resumo_temp"
+                app:iconPadding="-50dp"
+                app:iconSize="40dp"
+                app:iconTintMode="multiply"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnHomeNormalResumoFin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

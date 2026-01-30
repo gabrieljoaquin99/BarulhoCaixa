@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadPresencaJogoActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblCadPresJogoPres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Presença"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/spnCadPresJogo1"
+                app:layout_constraintStart_toStartOf="@+id/ckbCadPresJogo1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblCadPresJogoGols"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Gols"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/txtCadPresJogoGols1"
+                app:layout_constraintStart_toStartOf="@+id/txtCadPresJogoGols1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblCadPresJogoAssis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Assist."
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblCadPresJogoPres" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo1"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols1"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo1"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo1" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis1"
+                app:layout_constraintTop_toBottomOf="@+id/lblCadPresJogoGols" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/lblCadPresJogoGols" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo1" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo2"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols2"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo2"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo2" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis2"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoGols1" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoAssis1" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo2" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo3"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols3"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo3"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo3" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis3"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoGols2" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoAssis2" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo3" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo4"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols4"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo4"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo4" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis4"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoGols3" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoAssis3" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo4" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo5"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols5"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo5"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo5" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis5"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoGols4" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoAssis4" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo5" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo6"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols6"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo6"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo6" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols6"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis6"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoGols5" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis6"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoAssis5" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo6" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo7"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols7"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo7"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo7" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols7"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis7"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoGols6" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis7"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoAssis6" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo7" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo8"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols8"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo8"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo8" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols8"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis8"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoGols7" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis8"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoAssis7" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo8" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo9"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols9"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo9"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo9" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols9"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis9"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoGols8" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis9"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoAssis8" />
+
+            <CheckBox
+                android:id="@+id/ckbCadPresJogo10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo9" />
+
+            <Spinner
+                android:id="@+id/spnCadPresJogo10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ckbCadPresJogo10"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoGols10"
+                app:layout_constraintStart_toEndOf="@+id/ckbCadPresJogo10"
+                app:layout_constraintTop_toTopOf="@+id/ckbCadPresJogo10" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoGols10"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/txtCadPresJogoAssis10"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoGols9" />
+
+            <EditText
+                android:id="@+id/txtCadPresJogoAssis10"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintStart_toStartOf="@+id/lblCadPresJogoAssis"
+                app:layout_constraintTop_toBottomOf="@+id/txtCadPresJogoAssis9" />
+
+            <Button
+                android:id="@+id/btnCadPresJogoAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/primary"
+                android:onClick="btnCadPresJogoAdd"
+                android:text="ADICIONAR PRESENÇAS (G/A)"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbCadPresJogo10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
